@@ -1,0 +1,146 @@
+.hero {
+  background: linear-gradient(rgba(11, 11, 11, 0.7), rgba(11, 11, 11, 0.7)), url("../assets/ConstructionSite.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); }
+  .hero h1 {
+    color: #ffc107; }
+  .hero .btn-warning {
+    color: #0b0b0b; }
+
+.service-card {
+  background-color: #0B0B0B;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .service-card img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease; }
+  .service-card h4, .service-card p {
+    transition: color 0.3s ease; }
+  .service-card:hover {
+    background-color: #ffc107;
+    color: #0B0B0B; }
+    .service-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.9); }
+    .service-card:hover h4, .service-card:hover p {
+      color: #0B0B0B; }
+
+#about {
+  background-color: #f6f6f6;
+  color: #0B0B0B; }
+  #about h2 {
+    color: #ffc107; }
+  #about p {
+    color: #2E2E2E; }
+  #about .btn-warning {
+    color: #0B0B0B; }
+    #about .btn-warning:hover {
+      background-color: #e6b800; }
+  #about img {
+    max-height: 400px;
+    object-fit: cover; }
+
+#projects {
+  background-color: #0B0B0B;
+  color: #fff; }
+  #projects h2 {
+    color: #ffc107; }
+  #projects p {
+    color: #e0e0e0; }
+  #projects .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    #projects .project-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.5s ease; }
+    #projects .project-card .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 11, 11, 0.7);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transform: translateY(20px); }
+    #projects .project-card h5 {
+      font-weight: 600;
+      color: #ffc107;
+      margin-bottom: 0.5rem; }
+    #projects .project-card span {
+      font-weight: 500;
+      color: #ffc107; }
+    #projects .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); }
+      #projects .project-card:hover img {
+        transform: scale(1.1) rotate(-1deg);
+        filter: brightness(0.85); }
+      #projects .project-card:hover .overlay {
+        opacity: 1;
+        transform: translateY(0); }
+
+#contact {
+  background-color: #f6f6f6;
+  color: #0B0B0B; }
+  #contact h2 {
+    color: #ffc107; }
+  #contact p {
+    color: #2E2E2E; }
+  #contact .form-control {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+    #contact .form-control:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+      outline: none; }
+  #contact .btn-warning {
+    color: #0B0B0B;
+    transition: background-color 0.3s ease, transform 0.2s ease; }
+    #contact .btn-warning:hover {
+      background-color: #e6b800;
+      transform: translateY(-2px); }
+
+.footer {
+  background-color: #0B0B0B;
+  color: #fff; }
+  .footer h4, .footer h5 {
+    color: #ffc107; }
+  .footer p, .footer .footer-link {
+    color: #ccc;
+    transition: color 0.3s ease; }
+  .footer .footer-link:hover {
+    color: #ffc107;
+    text-decoration: none; }
+  .footer .social-icon {
+    display: inline-block;
+    margin-right: 0.7rem;
+    font-size: 1.2rem;
+    color: #ccc;
+    transition: transform 0.3s ease, color 0.3s ease; }
+    .footer .social-icon:hover {
+      color: #ffc107;
+      transform: translateY(-3px) scale(1.2); }
+  .footer .border-top {
+    border-color: rgba(255, 255, 255, 0.2) !important; }
+  .footer a[href="#top"] {
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; }
+    .footer a[href="#top"]:hover {
+      color: #fff;
+      transform: translateY(-2px); }
+
+/*# sourceMappingURL=main.css.map */

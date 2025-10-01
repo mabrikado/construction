@@ -1,0 +1,267 @@
+.hero {
+  background: linear-gradient(rgba(11, 11, 11, 0.7), rgba(11, 11, 11, 0.7)), 
+              url('../assets/ConstructionSite.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+
+  h1 {
+    color: #ffc107;
+  }
+
+  .btn-warning {
+    color: #0b0b0b;
+  }
+}
+
+.service-card {
+  background-color: #0B0B0B;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  h4, p {
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #ffc107;
+    color: #0B0B0B;
+    img {
+      transform: scale(1.05);
+      filter: brightness(0.9);
+    }
+    h4, p {
+      color: #0B0B0B;
+    }
+  }
+}
+
+#about {
+  background-color: #f6f6f6;
+  color: #0B0B0B;
+
+  h2 {
+    color: #ffc107;
+  }
+
+  p {
+    color: #2E2E2E;
+  }
+
+  .btn-warning {
+    color: #0B0B0B;
+    &:hover {
+      background-color: #e6b800;
+    }
+  }
+
+  img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+
+#projects {
+  background-color: #0B0B0B; 
+  color: #fff;
+
+  h2 {
+    color: #ffc107; 
+  }
+
+  p {
+    color: #e0e0e0; 
+  }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 11, 11, 0.7);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transform: translateY(20px); // start slightly below
+    }
+
+    h5 {
+      font-weight: 600;
+      color: #ffc107; 
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      font-weight: 500;
+      color: #ffc107;
+    }
+
+    &:hover {
+      transform: translateY(-8px) scale(1.02); // card lifts slightly
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4); // stronger shadow for depth
+
+      img {
+        transform: scale(1.1) rotate(-1deg); // subtle rotation + zoom
+        filter: brightness(0.85);
+      }
+
+      .overlay {
+        opacity: 1;
+        transform: translateY(0); // slide overlay into view
+      }
+    }
+  }
+}
+
+#testimonials {
+  background-color: #f6f6f6;
+  color: #0B0B0B;
+  padding: 5rem 0;
+
+  h2 {
+    color: #ffc107;
+    margin-bottom: 3rem;
+  }
+
+  .testimonial-card {
+    background-color: #fff;
+    border-left: 5px solid transparent;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    height: 100%;
+
+    // Quotation mark
+    &::before {
+      content: '“';
+      font-size: 3rem;
+      color: #ffc107;
+      position: absolute;
+      top: -10px;
+      left: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+      border-left-color: #ffc107;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    h5 {
+      color: #ffc107;
+      margin-bottom: 0.25rem;
+    }
+
+    small {
+      color: #666;
+    }
+  }
+
+  // Responsive spacing
+  @media (max-width: 767px) {
+    .testimonial-card {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+
+
+#contact {
+  background-color: #f6f6f6;
+  color: #0B0B0B;
+
+  h2 {
+    color: #ffc107;
+  }
+
+  p {
+    color: #2E2E2E;
+  }
+
+  .form-control {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+      outline: none;
+    }
+  }
+
+  .btn-warning {
+    color: #0B0B0B;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #e6b800;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.footer {
+  background-color: #0B0B0B;
+  color: #fff;
+  padding: 3rem 1rem;
+
+  p {
+    color: #ccc !important; // make sure it overrides other styles
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  h4, h5 {
+    color: #ffc107;
+  }
+
+  .footer-link {
+    color: #ccc;
+    &:hover {
+      color: #ffc107;
+    }
+  }
+
+  .social-icon {
+    color: #ccc;
+    &:hover {
+      color: #ffc107;
+    }
+  }
+
+}
+
+

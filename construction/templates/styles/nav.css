@@ -1,0 +1,39 @@
+/* SCSS compiled to CSS */
+.navbar-custom {
+  background-color: #0B0B0B; }
+  .navbar-custom .nav-link {
+    color: #fff; }
+    .navbar-custom .nav-link:hover {
+      color: #ffc107; }
+  .navbar-custom .navbar-brand {
+    font-weight: 700;
+    color: #ffc107 !important; }
+
+.navbar-toggler {
+  border-color: #ffc107; }
+  .navbar-toggler:focus {
+    box-shadow: none; }
+
+.navbar-toggler-icon {
+  background-image: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative; }
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease; }
+
+/* Active state - change lines to warning */
+.toggler-active .navbar-toggler-icon::before,
+.toggler-active .navbar-toggler-icon::after,
+.toggler-active .navbar-toggler-icon div {
+  background-color: #ffc107; }
+
+/*# sourceMappingURL=nav.css.map */
