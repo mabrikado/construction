@@ -10,7 +10,7 @@ class BlogPageView(TemplateView):
         try:
             self.post = Post.objects.get(slug=slug)
         except Post.DoesNotExist:
-            return render(request, "_404.html")
+            return render(request, "404.html")
 
         return render(request, self.template_name , {"post": self.post})
     

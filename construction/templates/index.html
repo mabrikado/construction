@@ -30,7 +30,7 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'blog_list' %}">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -193,6 +193,35 @@
       </div>
     </section>
 
+
+<section id="blog" class="py-5 bg-dark text-white">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-5">Latest Blogs</h2>
+    <div class="row g-4">
+      
+      {% for post in posts %}
+      <div class="col-md-4">
+        <div class="blog-card p-3 rounded shadow-sm">
+          {% if post.image %}
+          <img src="{{ post.image.url}}" 
+               alt="{{ post.title }}" 
+               class="img-fluid rounded mb-3" 
+               style="height:200px; object-fit:cover;">
+          {% endif %}
+          <h5 class="fw-bold text-warning mb-2">{{ post.title }}</h5>
+          <p class="text-muted mb-2">By {{ post.author }} · {{ post.created_at|date:"M d, Y" }}</p>
+          <p>{{ post.description }}</p>
+          <a href="{% url 'blog_post' post.slug %}" class="btn btn-warning btn-sm mt-2">Read More</a>
+        </div>
+      </div>
+      {% empty %}
+      <p class="text-light">No blogs available at the moment.</p>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
     <section id="contact" class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">
@@ -216,16 +245,16 @@
               {% csrf_token %}
               <div class="row g-3">
                 <div class="col-md-6">
-                  <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                  <input type="text" name = "name" class="form-control form-control-lg" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+                  <input type="email" name = "email" class="form-control form-control-lg" placeholder="Your Email" required>
                 </div>
                 <div class="col-12">
-                  <input type="text" class="form-control form-control-lg" placeholder="Subject" required>
+                  <input type="text" name = "subject" class="form-control form-control-lg" placeholder="Subject" required>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control form-control-lg" rows="5" placeholder="Your Message" required></textarea>
+                  <textarea class="form-control form-control-lg" name = "message" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 <div class="col-12 text-center">
                   <button type="submit" class="btn btn-warning btn-lg fw-semibold">Send Message</button>
@@ -236,6 +265,8 @@
         </div>
       </div>
     </section>
+
+
 
     <footer class="footer bg-dark text-white pt-5">
       <div class="container">
